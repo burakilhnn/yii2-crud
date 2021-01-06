@@ -1,0 +1,36 @@
+{
+  "name": "burakilhnn/yii2-crud",
+  "description": "Yii2 Crud Module",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "burakilhnn",
+      "email": "burakilhan.dk@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "yiisoft/yii2": "~2.0.13"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8.*.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "burakilhnn\\crud\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "burakilhnn\\crud\\tests\\": "tests"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
