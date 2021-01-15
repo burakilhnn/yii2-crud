@@ -5,7 +5,7 @@ namespace burakilhnn\crud\controllers;
 use yii\web\Controller;
 
 /**
- * Default controller for the `todo` module
+ * Default controller for the `sports` module
  */
 class DefaultController extends Controller
 {
