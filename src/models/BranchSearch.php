@@ -4,12 +4,12 @@ namespace burakilhnn\crud\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use burakilhnn\crud\models\Tasks;
+use burakilhnn\crud\models\Branch;
 
 /**
- * TasksSearch represents the model behind the search form of `backend\modules\todo\models\Tasks`.
+ * BranchSearch represents the model behind the search form of `backend\modules\sports\models\Branch`.
  */
-class TasksSearch extends Tasks
+class BranchSearch extends Branch
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class TasksSearch extends Tasks
     public function rules()
     {
         return [
-            [['task_id', 'user_id'], 'integer'],
-            [['title', 'items', 'date'], 'safe'],
+            [['branch_id', 'club_id'], 'integer'],
+            [['branch_name', 'branch_address', 'branch_created_at', 'branch_status'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class TasksSearch extends Tasks
      */
     public function search($params)
     {
-        $query = Tasks::find();
+        $query = Branch::find();
 
         // add conditions that should always apply here
 
@@ -58,13 +58,14 @@ class TasksSearch extends Tasks
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'task_id' => $this->task_id,
-            'date' => $this->date,
-            'user_id' => $this->user_id,
+            'branch_id' => $this->branch_id,
+            'club_id' => $this->club_id,
+            'branch_created_at' => $this->branch_created_at,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'items', $this->items]);
+        $query->andFilterWhere(['like', 'branch_name', $this->branch_name])
+            ->andFilterWhere(['like', 'branch_address', $this->branch_address])
+            ->andFilterWhere(['like', 'branch_status', $this->branch_status]);
 
         return $dataProvider;
     }

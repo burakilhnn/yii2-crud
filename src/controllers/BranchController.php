@@ -3,17 +3,16 @@
 namespace burakilhnn\crud\controllers;
 
 use Yii;
-use burakilhnn\crud\models\Tasks;
-use burakilhnn\crud\models\TasksSearch;
+use burakilhnn\crud\models\Branch;
+use burakilhnn\crud\models\BranchSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
- * TasksController implements the CRUD actions for Tasks model.
+ * BranchController implements the CRUD actions for Branch model.
  */
-class TasksController extends Controller
+class BranchController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -21,16 +20,6 @@ class TasksController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create', 'update','delete'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@']
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -41,12 +30,12 @@ class TasksController extends Controller
     }
 
     /**
-     * Lists all Tasks models.
+     * Lists all Branch models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new TasksSearch();
+        $searchModel = new BranchSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -56,7 +45,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Displays a single Tasks model.
+     * Displays a single Branch model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -69,16 +58,16 @@ class TasksController extends Controller
     }
 
     /**
-     * Creates a new Tasks model.
+     * Creates a new Branch model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Tasks();
+        $model = new Branch();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->task_id]);
+            return $this->redirect(['view', 'id' => $model->branch_id]);
         }
 
         return $this->render('create', [
@@ -87,7 +76,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Updates an existing Tasks model.
+     * Updates an existing Branch model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +87,7 @@ class TasksController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->task_id]);
+            return $this->redirect(['view', 'id' => $model->branch_id]);
         }
 
         return $this->render('update', [
@@ -107,7 +96,7 @@ class TasksController extends Controller
     }
 
     /**
-     * Deletes an existing Tasks model.
+     * Deletes an existing Branch model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -121,15 +110,15 @@ class TasksController extends Controller
     }
 
     /**
-     * Finds the Tasks model based on its primary key value.
+     * Finds the Branch model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Tasks the loaded model
+     * @return Branch the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Tasks::findOne($id)) !== null) {
+        if (($model = Branch::findOne($id)) !== null) {
             return $model;
         }
 

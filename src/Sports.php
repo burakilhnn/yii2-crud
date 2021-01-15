@@ -3,9 +3,9 @@
 namespace burakilhnn\crud;
 
 /**
- * todo module definition class
+ * sports module definition class
  */
-class Todo extends \yii\base\Module
+class Sports extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
@@ -19,5 +19,6 @@ class Todo extends \yii\base\Module
     {
         parent::init();
 
+        // custom initialization code goes here
     }
 }
