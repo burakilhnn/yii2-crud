@@ -32,6 +32,6 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
     ],
  ```
 
- Daha sonra ```php migrate/up``` komutunu çalıştırın. Bu komut ile extension içerisinde tanımlanan ve gerekli olan tablolar kullandığınız database içerisinde oluşturulacaktır.
+ Daha sonra ```php yii migrate/up``` komutunu çalıştırın. Bu komut ile extension içerisinde tanımlanan ve gerekli olan tablolar kullandığınız database içerisinde oluşturulacaktır.
  
  Extension kullanıma hazır. ```.../backend/web/index.php?r=crud/clubs``` uzantısına girerek kulüp bilgilerini, ```.../backend/web/index.php?r=crud/branch``` uzantısına girerek de şube bilgilerini oluşturabilirsiniz.
