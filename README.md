@@ -10,7 +10,11 @@ Bu uzantıyı yüklerken tercih edilen yol composer ile yüklemektir. [composer]
  Sonrasında proje dosyanızın içerisinde konsolda
 
 ```
-composer require burakilhnn/yii2-crud
+composer require burakilhnn/yii2-crud "dev-develop"
+
+veya
+
+composer require burakilhnn/yii2-crud "dev-main"
 ```
 
 komutunu çalıştırarak extensionu indirin. Extension, proje dosyanızın altındaki vendor dosyası içerisinde burakilhnn adıyla bulunacaktır.
