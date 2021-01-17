@@ -47,7 +47,7 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  
  ![rules](https://user-images.githubusercontent.com/58756954/104854951-bffd4380-591a-11eb-8a0c-b4b9aacdddeb.png)
  
- Yeni bir kulüp oluşturmak için ise Create Branch butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
+ Yeni bir şube/branş oluşturmak için ise Create Branch butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
   
  ![create_branch](https://user-images.githubusercontent.com/58756954/104854655-0baeed80-5919-11eb-945a-bdd81a1170cc.png)
  
