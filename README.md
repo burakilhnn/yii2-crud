@@ -38,6 +38,6 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  
  NOT : Clubs ve Branches arasında ilişki vardır. Dolayısıyla bir kulüp oluşturmadan o kulübün herhangi bir şubesini oluşturamazsınız.
  
- ```.../backend/web/index.php?r=crud/clubs``` : ![clubs](https://user-images.githubusercontent.com/58756954/104828203-b7076600-5877-11eb-8567-a3890d09f609.png)
- ```.../backend/web/index.php?r=crud/branch``` : ![branch](https://user-images.githubusercontent.com/58756954/104828217-dacaac00-5877-11eb-906c-0625b82ec812.png)
+ ```.../backend/web/index.php?r=crud/clubs``` örneği: ![clubs](https://user-images.githubusercontent.com/58756954/104828203-b7076600-5877-11eb-8567-a3890d09f609.png)
+ ```.../backend/web/index.php?r=crud/branch``` örneği: ![branch](https://user-images.githubusercontent.com/58756954/104828217-dacaac00-5877-11eb-906c-0625b82ec812.png)
 
