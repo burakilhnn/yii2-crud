@@ -36,6 +36,8 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  
  Extension kullanıma hazır. ```.../backend/web/index.php?r=crud/clubs``` sayfasına girerek create clubs butonuna tıklayıp kulüp bilgilerini, ```.../backend/web/index.php?r=crud/branch``` sayfasına girerek create branch butonuna tıklayıp şube bilgilerini oluşturabilirsiniz.
  
+ NOT : Clubs ve Branches arasında ilişki vardır. Dolayısıyla bir kulüp oluşturmadan o kulübün herhangi bir şubesini oluşturamazsınız.
+ 
  ```.../backend/web/index.php?r=crud/clubs``` : ![clubs](https://user-images.githubusercontent.com/58756954/104828203-b7076600-5877-11eb-8567-a3890d09f609.png)
  ```.../backend/web/index.php?r=crud/branch``` : ![branch](https://user-images.githubusercontent.com/58756954/104828217-dacaac00-5877-11eb-906c-0625b82ec812.png)
 
