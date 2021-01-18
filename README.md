@@ -41,7 +41,7 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  ```.../backend/web/index.php?r=crud/clubs``` örneği: ![clubs](https://user-images.githubusercontent.com/58756954/104828203-b7076600-5877-11eb-8567-a3890d09f609.png)
  ```.../backend/web/index.php?r=crud/branch``` örneği: ![branch](https://user-images.githubusercontent.com/58756954/104828217-dacaac00-5877-11eb-906c-0625b82ec812.png)
  
- Yeni kulüp oluşturmak için Create Clubs butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
+ Yeni kulüp oluşturmak için ```.../backend/web/index.php?r=crud/clubs``` sayfasında Create Clubs butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
  
  ![create_clubs](https://user-images.githubusercontent.com/58756954/104854643-f934b400-5918-11eb-8525-5ea5f92361f4.png)
  
@@ -49,7 +49,7 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  
  ![rules](https://user-images.githubusercontent.com/58756954/104854951-bffd4380-591a-11eb-8a0c-b4b9aacdddeb.png)
  
- Yeni bir şube/branş oluşturmak için ise Create Branch butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
+ Yeni bir şube/branş oluşturmak için ise ```.../backend/web/index.php?r=crud/branch``` sayfasında Create Branch butonuna tıklayın. Karşınıza aşağıdaki sayfa gelecektir.
   
  ![create_branch](https://user-images.githubusercontent.com/58756954/104854655-0baeed80-5919-11eb-945a-bdd81a1170cc.png)
  
