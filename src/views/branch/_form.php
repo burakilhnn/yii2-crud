@@ -14,7 +14,7 @@ use yii\helpers\ArrayHelper;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'club_id')->dropDownList(
-            \yii\helpers\ArrayHelper::map(\backend\modules\sports\models\Clubs::find()->all(), 'id','name'),
+            \yii\helpers\ArrayHelper::map(\burakilhnn\crud\models\Clubs::find()->all(), 'id','name'),
         ['prompt' => 'Select Club']
     ) ?>
 
