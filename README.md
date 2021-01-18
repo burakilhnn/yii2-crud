@@ -57,6 +57,6 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  
  ![branch_rules](https://user-images.githubusercontent.com/58756954/104855227-98a77600-591c-11eb-8743-2ea4d899bdbf.png)
  
- Son olarak clubs ve branch sayfalarında girilen verilerden gözükmesini istemediğiniz bir veri olması durumunda ``` burakilhnn/yii2-crud/src/views ``` altındaki clubs (veya branch, hangisi ile işlem yapmak istiyorsanız) içerisinde bulunan index.php dosyasını açın. GridView'in columns kısmında istediğiniz özelliği silerek veya yorum satırı haline getirerek bunu ayarlayabilirsiniz. ``` burakilhnn/yii2-crud/src/views ``` altındaki clubs kısmı kulüp ```.../backend/web/index.php?r=crud/clubs``` sayfasındaki görünümlerden, branch kısmı ise ```.../backend/web/index.php?r=crud/branch``` sayfasındaki görünümlerden sorumludur.
+ Son olarak clubs ve branch sayfalarında girilen verilerden gözükmesini istemediğiniz bir veri olması durumunda ``` burakilhnn/yii2-crud/src/views ``` altındaki clubs (veya branch, hangisi ile işlem yapmak istiyorsanız) içerisinde bulunan index.php dosyasını açın. GridView'in columns kısmında istediğiniz özelliği silerek veya yorum satırı haline getirerek bunu ayarlayabilirsiniz. ``` burakilhnn/yii2-crud/src/views ``` altındaki clubs kısmı ```.../backend/web/index.php?r=crud/clubs``` sayfasındaki görünümlerden, branch kısmı ise ```.../backend/web/index.php?r=crud/branch``` sayfasındaki görünümlerden sorumludur.
 
 ![view](https://user-images.githubusercontent.com/58756954/104859803-cbf7fe00-5938-11eb-967a-ad1780fb12c5.png)
