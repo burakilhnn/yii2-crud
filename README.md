@@ -1,6 +1,6 @@
 # Yii2 Crud extension
 
-Bu extension, spor kulüplerini ve bu kulüplere ait şubeleri(basketbol,hentbol,futbol vb.) tutabilmenize olanak sağlar.
+Bu extension, spor kulüplerini ve bu kulüplere ait şubeleri(basketbol,hentbol,futbol vb.) tutabilmenize olanak sağlar. 4 kısımdan oluşur: models,views,controllers,migrations. Controllers, gelen talepleri işlemek ve yanıtlar oluşturmaktan sorumludur olan kısımdır. Kullanıcının talebinden sonra, talep verilerini analiz eder, bunları modele aktarır, ardından model sonucunu bir view'a ekler ve bir yanıt oluşturur. Models verilerin yönetilmesinden sorumlu kısımdır, viewdan gelen taleplere yanıt verir. Views verilerin kullanıcıya sunulmasından sorumlu kısımdır, yalnızca HTML ve PHP kodu içeren PHP betik dosyalarıdır. Migrations ise veritabanı tablolarını oluşturduğumuz kısımdır.
 
 Kurulum
 ------------
@@ -20,7 +20,7 @@ composer require burakilhnn/yii2-crud "dev-main"
 komutunu çalıştırarak extensionu indirin. Extension, proje dosyanızın altındaki vendor dosyası içerisinde burakilhnn adıyla bulunacaktır.
 
 
-Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.php``` kısmına gelerek aşağıdaki gibi extensionu projenize ekleyin.
+Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.php``` kısmına gelerek aşağıdaki şekilde extensionu projenize ekleyin.
 ```
 'modules' => [
         'crud' => [
@@ -29,6 +29,8 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
     ],
  ```
   Daha sonra proje dosyanızın içerisinde konsolda ```php yii migrate/up``` komutunu çalıştırın. Bu komut ile extension içerisinde tanımlanan ve gerekli olan tablolar kullandığınız database içerisinde oluşturulacaktır.
+  ![data](https://user-images.githubusercontent.com/58756954/104859697-1e84ea80-5938-11eb-94af-5e43529a93bf.png)
+
   Bu adımlardan sonra extension kullanıma hazır olacaktır. ```.../backend/web/index.php?r=crud/clubs``` sayfasına girerek create clubs butonuna tıklayıp kulüp bilgilerini, ```.../backend/web/index.php?r=crud/branch``` sayfasına girerek create branch butonuna tıklayıp şube bilgilerini oluşturabilirsiniz.
  
  
@@ -54,9 +56,7 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
  Burada şubesi oluşturulacak kulübün adı, şubenin adı,adresi ve statüsü(aktif veya inaktif) girilmesi gereklidir. Created At kısmına ise bu kayıtı gerçekleştirdiğiniz zamanı YIL-AY-GÜN, SAAT:DAKİKA:SANİYE olarak girmeniz beklenmektedir. Şube oluşturabilmek için bu alanlar boş bırakılamaz. Club ID kısmında daha önce oluşturduğunuz takımların isimleri bir dropdown list içerisinde gelecektir. Kulüp ve Şube arasında bir ilişki olduğu için oluşturmadığınız bir kulübün şubesini oluşturamazsınız. Diğer girilmesi zorunlu özellikleri değiştirmek için ``` burakilhnn/yii2-crud/src/models ``` altındaki Branch.php dosyasını açın, aşağıdaki fotoğrafta görüldüğü gibi rules fonksiyonu altında required kısmı bulunmaktadır. Buradan kayıt esnasında girilmesinin zorunlu olmasını istemediğiniz özellikleri ayarlayabilirsiniz. 
  
  ![branch_rules](https://user-images.githubusercontent.com/58756954/104855227-98a77600-591c-11eb-8743-2ea4d899bdbf.png)
-
-
-
  
- 
+ Son olarak clubs ve branch sayfalarında girilen verilerden gözükmesini istemediğiniz bir veri olması durumunda ``` burakilhnn/yii2-crud/src/views ``` altındaki sports (veya branch, hangisi ile işlem yapmak istiyorsanız) içerisinde bulunan index.php dosyasını açın. GridView'in columns kısmında istediğiniz özelliği silerek veya yorum satırı haline getirerek bunu ayarlayabilirsiniz.
 
+![view](https://user-images.githubusercontent.com/58756954/104859803-cbf7fe00-5938-11eb-967a-ad1780fb12c5.png)
