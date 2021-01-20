@@ -7,7 +7,7 @@ Kurulum
 
 Bu uzantıyı yüklerken tercih edilen yol composer ile yüklemektir. [composer](http://getcomposer.org/download/).
 
- Sonrasında proje dosyanızın içerisinde konsolda
+ Sonrasında proje dosyanızın kök dizininde ("/var/www/domain" gibi) konsolda
 
 ```
 composer require burakilhnn/yii2-crud "dev-develop"
@@ -28,7 +28,7 @@ Advanced projenizin ```backend/config/main.php``` veya ```frontend/config/main.p
         ],
     ],
  ```
-  Daha sonra ``` vendor/burakilhnn/yii2-crud/src/migrations ``` içerisindeki dosyayı advanced projenizin ``` console/migrations ``` kısmına taşıyınız ve proje dosyanızın içerisinde konsolda ```php yii migrate``` komutunu çalıştırın. Bu komut ile extension içerisinde tanımlanan ve gerekli olan tablolar, kullandığınız database içerisinde oluşturulacaktır. ``` projeadı/phpmyadmin ``` uzantısından databasenizi görebilirsiniz. Advanced projenizin ``` common/config/main-local.php ``` kısmında database bilgileriniz bulunmaktadır. Buradan ```'dsn' => 'mysql:host=localhost;dbname=yii2advanced' ``` satırındaki dbname kısmını değiştirerek kullanmak istediğiniz veritabanını değiştirebilirsiniz. Burada bulunan username ve password bilgileriyle phpmyadmin üzerinden veritabanlarınızı ve tablolarınızı görebilirsiniz. Extension ile gelecek migration dosyası ile oluşturulacak tabloların ilişkisi şu şekildedir :  
+  Daha sonra yine proje dosyanızın kök dizininde ```php yii migrate/up --migrationPath=@vendor/burakilhnn/yii2-crud/src/migrations``` komutunu konsolda çalıştırın. Migrationu bulamama gibi bir durum oluşması durumunda 2. seçenek olarak ``` vendor/burakilhnn/yii2-crud/src/migrations ``` içerisindeki dosyayı advanced projenizin ``` console/migrations ``` kısmına taşıyabilir ve proje kök dizininde konsolda ```php yii migrate/up``` komutunu çalıştırabilirsiniz. Bu komut ile extension içerisinde tanımlanan ve gerekli olan tablolar, kullandığınız database içerisinde oluşturulacaktır. ``` projeadı/phpmyadmin ``` uzantısından databasenizi görebilirsiniz. Advanced projenizin ``` common/config/main-local.php ``` kısmında database bilgileriniz bulunmaktadır. Buradan ```'dsn' => 'mysql:host=localhost;dbname=yii2advanced' ``` satırındaki dbname kısmını değiştirerek kullanmak istediğiniz veritabanını değiştirebilirsiniz. Burada bulunan username ve password bilgileriyle phpmyadmin üzerinden veritabanlarınızı ve tablolarınızı görebilirsiniz. Extension ile gelecek migration dosyası ile oluşturulacak tabloların ilişkisi şu şekildedir :  
   ![data](https://user-images.githubusercontent.com/58756954/104859697-1e84ea80-5938-11eb-94af-5e43529a93bf.png)
 
   Bu adımlardan sonra extension kullanıma hazır olacaktır. ```.../backend/web/index.php?r=crud/clubs``` sayfasına girerek create clubs butonuna tıklayıp kulüp bilgilerini, ```.../backend/web/index.php?r=crud/branch``` sayfasına girerek create branch butonuna tıklayıp şube bilgilerini oluşturabilirsiniz.
